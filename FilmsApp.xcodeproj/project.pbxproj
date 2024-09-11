@@ -21,6 +21,7 @@
 		2456FD7E2C81F34A009AC7EB /* FilmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2456FD7D2C81F34A009AC7EB /* FilmCollectionViewCell.swift */; };
 		2456FD802C85BAAF009AC7EB /* FilmCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2456FD7F2C85BAAF009AC7EB /* FilmCollectionViewCell.xib */; };
 		2456FD822C884AEA009AC7EB /* PosterFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2456FD812C884AEA009AC7EB /* PosterFullViewController.swift */; };
+		2481F1032C91966E0012DC9C /* RoundingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481F1022C91966E0012DC9C /* RoundingTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		2456FD7D2C81F34A009AC7EB /* FilmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCollectionViewCell.swift; sourceTree = "<group>"; };
 		2456FD7F2C85BAAF009AC7EB /* FilmCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmCollectionViewCell.xib; sourceTree = "<group>"; };
 		2456FD812C884AEA009AC7EB /* PosterFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterFullViewController.swift; sourceTree = "<group>"; };
+		2481F1022C91966E0012DC9C /* RoundingTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundingTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				2456FD5F2C7CE5BC009AC7EB /* SceneDelegate.swift */,
 				2456FD632C7CE5BC009AC7EB /* Main.storyboard */,
 				2456FD812C884AEA009AC7EB /* PosterFullViewController.swift */,
+				2481F1022C91966E0012DC9C /* RoundingTransition.swift */,
 				2456FD7F2C85BAAF009AC7EB /* FilmCollectionViewCell.xib */,
 				2456FD7D2C81F34A009AC7EB /* FilmCollectionViewCell.swift */,
 				2456FD7B2C7CEABE009AC7EB /* JSONModel.swift */,
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2481F1032C91966E0012DC9C /* RoundingTransition.swift in Sources */,
 				2456FD7A2C7CE75F009AC7EB /* FavoriteFilmsViewController.swift in Sources */,
 				2456FD782C7CE749009AC7EB /* FullPicViewController.swift in Sources */,
 				2456FD722C7CE662009AC7EB /* MainViewController.swift in Sources */,
