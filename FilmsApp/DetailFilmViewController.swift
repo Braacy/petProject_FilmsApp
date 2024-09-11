@@ -7,7 +7,10 @@
 
 import UIKit
 
-class DetailFilmViewController: UIViewController {
+class DetailFilmViewController: UIViewController, UIViewControllerTransitioningDelegate {
+    
+    
+    var transition: RoundingTransition = RoundingTransition()
     
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var filmTitleLabel: UILabel!
@@ -29,11 +32,31 @@ class DetailFilmViewController: UIViewController {
         
     }
     
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionProfile = .show
+        transition.start = posterImageView.center
+        transition.roundColor = UIColor.lightGray
+        
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionProfile = .cancel
+        transition.start = posterImageView.center
+        transition.roundColor = UIColor.lightGray
+        
+        return transition
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destVC = segue.destination as? PosterFullViewController else {
             return
         }
         destVC.detailIndexPath = receivedIndex
+        
+        destVC.transitioningDelegate = self
+        destVC.modalPresentationStyle = .custom
+        
     }
     
     
