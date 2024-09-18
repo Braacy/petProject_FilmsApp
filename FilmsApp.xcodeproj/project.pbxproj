@@ -21,6 +21,9 @@
 		2456FD7E2C81F34A009AC7EB /* FilmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2456FD7D2C81F34A009AC7EB /* FilmCollectionViewCell.swift */; };
 		2456FD802C85BAAF009AC7EB /* FilmCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2456FD7F2C85BAAF009AC7EB /* FilmCollectionViewCell.xib */; };
 		2456FD822C884AEA009AC7EB /* PosterFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2456FD812C884AEA009AC7EB /* PosterFullViewController.swift */; };
+		2477AEB92C9B4AF3007A4083 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2477AEB82C9B4AF3007A4083 /* Model.swift */; };
+		2477AEBB2C9B4E4B007A4083 /* FavFilmsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2477AEBA2C9B4E4B007A4083 /* FavFilmsCollectionViewCell.xib */; };
+		2477AEBD2C9B4E7E007A4083 /* FavFilmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2477AEBC2C9B4E7E007A4083 /* FavFilmCollectionViewCell.swift */; };
 		2481F1032C91966E0012DC9C /* RoundingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481F1022C91966E0012DC9C /* RoundingTransition.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,9 @@
 		2456FD7D2C81F34A009AC7EB /* FilmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCollectionViewCell.swift; sourceTree = "<group>"; };
 		2456FD7F2C85BAAF009AC7EB /* FilmCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmCollectionViewCell.xib; sourceTree = "<group>"; };
 		2456FD812C884AEA009AC7EB /* PosterFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterFullViewController.swift; sourceTree = "<group>"; };
+		2477AEB82C9B4AF3007A4083 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2477AEBA2C9B4E4B007A4083 /* FavFilmsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavFilmsCollectionViewCell.xib; sourceTree = "<group>"; };
+		2477AEBC2C9B4E7E007A4083 /* FavFilmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavFilmCollectionViewCell.swift; sourceTree = "<group>"; };
 		2481F1022C91966E0012DC9C /* RoundingTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundingTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,24 +80,59 @@
 		2456FD5C2C7CE5BC009AC7EB /* FilmsApp */ = {
 			isa = PBXGroup;
 			children = (
+				2477AEB52C9B4A8F007A4083 /* Supporting Files */,
+				2477AEB42C9B4A69007A4083 /* View */,
+				2477AEB72C9B4AB0007A4083 /* Model */,
+				2477AEB62C9B4AA1007A4083 /* Controller */,
+				2456FD6B2C7CE5C0009AC7EB /* Info.plist */,
+			);
+			path = FilmsApp;
+			sourceTree = "<group>";
+		};
+		2477AEB42C9B4A69007A4083 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2481F1022C91966E0012DC9C /* RoundingTransition.swift */,
+				2456FD632C7CE5BC009AC7EB /* Main.storyboard */,
+				2456FD7F2C85BAAF009AC7EB /* FilmCollectionViewCell.xib */,
+				2477AEBA2C9B4E4B007A4083 /* FavFilmsCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2477AEB52C9B4A8F007A4083 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2456FD662C7CE5C0009AC7EB /* Assets.xcassets */,
+				2456FD682C7CE5C0009AC7EB /* LaunchScreen.storyboard */,
 				2456FD5D2C7CE5BC009AC7EB /* AppDelegate.swift */,
 				2456FD5F2C7CE5BC009AC7EB /* SceneDelegate.swift */,
-				2456FD632C7CE5BC009AC7EB /* Main.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2477AEB62C9B4AA1007A4083 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				2456FD812C884AEA009AC7EB /* PosterFullViewController.swift */,
-				2481F1022C91966E0012DC9C /* RoundingTransition.swift */,
-				2456FD7F2C85BAAF009AC7EB /* FilmCollectionViewCell.xib */,
-				2456FD7D2C81F34A009AC7EB /* FilmCollectionViewCell.swift */,
-				2456FD7B2C7CEABE009AC7EB /* JSONModel.swift */,
 				2456FD732C7CE721009AC7EB /* DetailFilmViewController.swift */,
 				2456FD752C7CE733009AC7EB /* FilmPicsViewController.swift */,
 				2456FD772C7CE749009AC7EB /* FullPicViewController.swift */,
 				2456FD792C7CE75F009AC7EB /* FavoriteFilmsViewController.swift */,
 				2456FD712C7CE662009AC7EB /* MainViewController.swift */,
-				2456FD662C7CE5C0009AC7EB /* Assets.xcassets */,
-				2456FD682C7CE5C0009AC7EB /* LaunchScreen.storyboard */,
-				2456FD6B2C7CE5C0009AC7EB /* Info.plist */,
 			);
-			path = FilmsApp;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2477AEB72C9B4AB0007A4083 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2456FD7D2C81F34A009AC7EB /* FilmCollectionViewCell.swift */,
+				2456FD7B2C7CEABE009AC7EB /* JSONModel.swift */,
+				2477AEB82C9B4AF3007A4083 /* Model.swift */,
+				2477AEBC2C9B4E7E007A4083 /* FavFilmCollectionViewCell.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +195,7 @@
 			files = (
 				2456FD6A2C7CE5C0009AC7EB /* LaunchScreen.storyboard in Resources */,
 				2456FD672C7CE5C0009AC7EB /* Assets.xcassets in Resources */,
+				2477AEBB2C9B4E4B007A4083 /* FavFilmsCollectionViewCell.xib in Resources */,
 				2456FD802C85BAAF009AC7EB /* FilmCollectionViewCell.xib in Resources */,
 				2456FD652C7CE5BC009AC7EB /* Main.storyboard in Resources */,
 			);
@@ -169,10 +211,12 @@
 				2481F1032C91966E0012DC9C /* RoundingTransition.swift in Sources */,
 				2456FD7A2C7CE75F009AC7EB /* FavoriteFilmsViewController.swift in Sources */,
 				2456FD782C7CE749009AC7EB /* FullPicViewController.swift in Sources */,
+				2477AEB92C9B4AF3007A4083 /* Model.swift in Sources */,
 				2456FD722C7CE662009AC7EB /* MainViewController.swift in Sources */,
 				2456FD5E2C7CE5BC009AC7EB /* AppDelegate.swift in Sources */,
 				2456FD602C7CE5BC009AC7EB /* SceneDelegate.swift in Sources */,
 				2456FD7C2C7CEABE009AC7EB /* JSONModel.swift in Sources */,
+				2477AEBD2C9B4E7E007A4083 /* FavFilmCollectionViewCell.swift in Sources */,
 				2456FD822C884AEA009AC7EB /* PosterFullViewController.swift in Sources */,
 				2456FD7E2C81F34A009AC7EB /* FilmCollectionViewCell.swift in Sources */,
 				2456FD762C7CE733009AC7EB /* FilmPicsViewController.swift in Sources */,

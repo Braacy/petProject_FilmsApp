@@ -16,7 +16,7 @@ class PosterFullViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fullPosterImageView.image = UIImage(named: testArray[detailIndexPath].testPic ?? "image1")
+        fullPosterImageView.image = UIImage(named: Model().testArray[detailIndexPath].testPic ?? "image1")
     }
     
 

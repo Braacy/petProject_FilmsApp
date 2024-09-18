@@ -19,7 +19,7 @@ class RoundingTransition: NSObject {
     
     var roundColor = UIColor.red
     
-    var time = 0.3
+    var time = 0.5
     
     enum RoundingTransitionProfile: Int {
         case show, cancel, pop

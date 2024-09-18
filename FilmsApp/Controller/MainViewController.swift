@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        testArray.count
+        Model().testArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -38,10 +38,10 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
                 FilmCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.posterPreviewImageView.image = UIImage(named: testArray[indexPath.row].testPic ?? "image1")
-        cell.filmTitleLabel.text = testArray[indexPath.row].testTitle
-        cell.realeaseYearLabel.text = testArray[indexPath.row].testYear
-        cell.ratingLabel.text = testArray[indexPath.row].testRating
+        cell.posterPreviewImageView.image = UIImage(named: Model().testArray[indexPath.row].testPic ?? "image1")
+        cell.filmTitleLabel.text = Model().testArray[indexPath.row].testTitle ?? "film"
+        cell.realeaseYearLabel.text = Model().testArray[indexPath.row].testYear
+        cell.ratingLabel.text = Model().testArray[indexPath.row].testRating
         
         return cell
     }
