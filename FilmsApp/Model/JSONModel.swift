@@ -15,3 +15,4 @@ class JSONModel: Codable {
     var vote_average: Double?
     var backdrop_path: String?
 }
+

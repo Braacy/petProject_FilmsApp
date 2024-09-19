@@ -21,21 +21,15 @@ class DetailFilmViewController: UIViewController, UIViewControllerTransitioningD
     
     var receivedIndex: Int = Int()
     
-    var cameFromFav: Bool = Bool()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if cameFromFav {
-            posterImageView.image = UIImage(named: Model().showLikedItems()[receivedIndex].testPic ?? "image5")
-            filmTitleLabel.text = Model().showLikedItems()[receivedIndex].testTitle
-            releaseYearLabel.text = Model().showLikedItems()[receivedIndex].testYear
-            ratingLabel.text = Model().showLikedItems()[receivedIndex].testRating
-        } else {
-            posterImageView.image = UIImage(named: Model().ratingSort()[receivedIndex].testPic ?? "image5")
-            filmTitleLabel.text = Model().ratingSort()[receivedIndex].testTitle
-            releaseYearLabel.text = Model().ratingSort()[receivedIndex].testYear
-            ratingLabel.text = Model().ratingSort()[receivedIndex].testRating
-        }
+
+        posterImageView.image = UIImage(named: Model().testArray[receivedIndex].testPic ?? "image1")
+        filmTitleLabel.text = Model().testArray[receivedIndex].testTitle
+        releaseYearLabel.text = Model().testArray[receivedIndex].testYear
+        ratingLabel.text = Model().testArray[receivedIndex].testRating
+        
+        
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {

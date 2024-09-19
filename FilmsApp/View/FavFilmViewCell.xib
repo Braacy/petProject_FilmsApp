@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavCell" id="8ue-OG-pbF" customClass="FavFilmViewCell" customModule="FilmsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="345"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EM6-Xa-3VI">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="345"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="b3I-DZ-YRg">
+                        <rect key="frame" x="8" y="5" width="144" height="337.33333333333331"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFU-yF-mxr">
+                                <rect key="frame" x="0.0" y="0.0" width="144" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="OYm-j8-8Mw"/>
+                                    <constraint firstAttribute="width" constant="144" id="sbc-R9-GIA"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="iY4-p2-Kit" userLabel="LabelsStackView">
+                                <rect key="frame" x="0.0" y="236" width="142.66666666666666" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название фильма" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJv-iD-oHt">
+                                        <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Год выпуска" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZt-5c-xiH">
+                                        <rect key="frame" x="0.0" y="20.333333333333314" width="98" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2N-ak-PD3">
+                                        <rect key="frame" x="0.0" y="40.666666666666686" width="65" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvH-SP-LOg">
+                                <rect key="frame" x="0.0" y="303" width="144" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.bin.circle" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jvH-SP-LOg" secondAttribute="trailing" id="LRF-Ql-gP2"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="b3I-DZ-YRg" secondAttribute="trailing" constant="8" id="M3r-5K-npO"/>
+                    <constraint firstItem="b3I-DZ-YRg" firstAttribute="leading" secondItem="EM6-Xa-3VI" secondAttribute="leading" constant="8" id="Xsw-TU-ELq"/>
+                    <constraint firstItem="b3I-DZ-YRg" firstAttribute="top" secondItem="EM6-Xa-3VI" secondAttribute="top" constant="5" id="cuc-CC-g3o"/>
+                    <constraint firstAttribute="bottom" secondItem="b3I-DZ-YRg" secondAttribute="bottom" constant="2.6699999999999999" id="wRT-Qm-YSE"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" systemColor="systemMintColor"/>
+            <size key="customSize" width="160" height="345"/>
+            <connections>
+                <outlet property="favFilmImageView" destination="jFU-yF-mxr" id="Z7i-Xc-WwB"/>
+                <outlet property="favFilmTitle" destination="sJv-iD-oHt" id="frU-Ms-9GC"/>
+                <outlet property="favRatingLabel" destination="h2N-ak-PD3" id="5vr-dV-LjF"/>
+                <outlet property="favRealeaseYEar" destination="dZt-5c-xiH" id="Sxh-Vf-sQe"/>
+            </connections>
+            <point key="canvasLocation" x="-124.61538461538461" y="-272.63033175355451"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="xmark.bin.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

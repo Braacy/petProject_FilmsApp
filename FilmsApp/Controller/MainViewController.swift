@@ -39,7 +39,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             return UICollectionViewCell()
         }
         cell.posterPreviewImageView.image = UIImage(named: Model().testArray[indexPath.row].testPic ?? "image1")
-        cell.filmTitleLabel.text = Model().testArray[indexPath.row].testTitle ?? "film"
+        cell.filmTitleLabel.text = Model().testArray[indexPath.row].testTitle
         cell.realeaseYearLabel.text = Model().testArray[indexPath.row].testYear
         cell.ratingLabel.text = Model().testArray[indexPath.row].testRating
         
