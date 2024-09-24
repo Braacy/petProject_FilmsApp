@@ -56,6 +56,15 @@ class MainViewController: UIViewController {
         
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        model.search(searchTextValue: searchText)
+        mainViewController.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        model.newTestArray = model.testArray
+        mainViewController.reloadData()
+    }
 }
 
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {

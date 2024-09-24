@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -114,25 +115,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="132" translatesAutoresizingMaskIntoConstraints="NO" id="Gbf-mL-Ei2">
-                                <rect key="frame" x="37" y="374" width="295" height="20.333333333333314"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Gbf-mL-Ei2">
+                                <rect key="frame" x="40" y="374" width="310" height="34.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3c-8r-XMe">
-                                        <rect key="frame" x="0.0" y="0.0" width="65" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="34.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzG-29-x7B">
+                                        <rect key="frame" x="97" y="0.0" width="83" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="heart" catalog="system" symbolScale="large" variableValue="5.5511151231257827e-17"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="likeButtonAction:" destination="RvH-jk-hE9" eventType="touchUpInside" id="BSl-PG-qaE"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Год выпуска" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdb-Cm-foT">
-                                        <rect key="frame" x="197" y="0.0" width="98" height="20.333333333333332"/>
+                                        <rect key="frame" x="212" y="0.0" width="98" height="34.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="elJ-h8-x04">
+                                <rect key="frame" x="16" y="474" width="358" height="124"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="pgU-51-XyW"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMi-Fr-oIi">
+                                <rect key="frame" x="37" y="445" width="80" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="7my-4s-e4Q">
+                                <rect key="frame" x="100" y="76" width="180" height="290"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="3bQ-4p-FKd"/>
+                                    <constraint firstAttribute="height" constant="290" id="sXM-Zk-dhZ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WPH-gy-Swv" appends="YES" id="fgB-cg-MBk"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название фильма" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhr-eg-IOO">
+                                <rect key="frame" x="140" y="47" width="142.66666666666663" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кадры, съемки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cv-sI-QZY">
+                                <rect key="frame" x="37" y="606" width="170" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qDf-1h-ly4">
-                                <rect key="frame" x="16" y="640" width="353" height="128"/>
+                                <rect key="frame" x="19" y="651" width="353" height="114"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OK6-yW-Lul">
                                     <size key="itemSize" width="128" height="128"/>
@@ -166,77 +218,38 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="elJ-h8-x04">
-                                <rect key="frame" x="16" y="460" width="358" height="124"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="124" id="pgU-51-XyW"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMi-Fr-oIi">
-                                <rect key="frame" x="37" y="431" width="170" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="7my-4s-e4Q">
-                                <rect key="frame" x="100" y="76" width="180" height="290"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="3bQ-4p-FKd"/>
-                                    <constraint firstAttribute="height" constant="290" id="sXM-Zk-dhZ"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="WPH-gy-Swv" appends="YES" id="fgB-cg-MBk"/>
-                                </connections>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название фильма" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhr-eg-IOO">
-                                <rect key="frame" x="109.99999999999999" y="47" width="142.66666666666663" height="20.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кадры, съемки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cv-sI-QZY">
-                                <rect key="frame" x="37" y="592" width="170" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Hz-SY-NdN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8Hz-SY-NdN" firstAttribute="bottom" secondItem="qDf-1h-ly4" secondAttribute="bottom" constant="42" id="2bN-0K-4ei"/>
+                            <constraint firstItem="8Hz-SY-NdN" firstAttribute="bottom" secondItem="qDf-1h-ly4" secondAttribute="bottom" constant="45" id="2bN-0K-4ei"/>
                             <constraint firstItem="9cv-sI-QZY" firstAttribute="leading" secondItem="8Hz-SY-NdN" secondAttribute="leading" constant="37" id="E8T-OE-CQV"/>
-                            <constraint firstItem="8Hz-SY-NdN" firstAttribute="trailing" secondItem="hMi-Fr-oIi" secondAttribute="trailing" constant="183" id="F2v-CL-Ptg"/>
+                            <constraint firstItem="8Hz-SY-NdN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hMi-Fr-oIi" secondAttribute="trailing" id="F2v-CL-Ptg"/>
                             <constraint firstItem="elJ-h8-x04" firstAttribute="leading" secondItem="8Hz-SY-NdN" secondAttribute="leading" constant="16" id="HBd-fT-Jc3"/>
                             <constraint firstItem="7my-4s-e4Q" firstAttribute="top" secondItem="Dhr-eg-IOO" secondAttribute="bottom" constant="8.6666666666666714" id="JIl-su-BTf"/>
                             <constraint firstItem="9cv-sI-QZY" firstAttribute="top" secondItem="elJ-h8-x04" secondAttribute="bottom" constant="8" symbolic="YES" id="JgV-7l-Fiq"/>
-                            <constraint firstItem="8Hz-SY-NdN" firstAttribute="trailing" secondItem="Gbf-mL-Ei2" secondAttribute="trailing" constant="58" id="KvA-4V-her"/>
-                            <constraint firstItem="8Hz-SY-NdN" firstAttribute="trailing" secondItem="qDf-1h-ly4" secondAttribute="trailing" constant="21" id="Ldw-7N-Mo5"/>
-                            <constraint firstItem="qDf-1h-ly4" firstAttribute="top" secondItem="9cv-sI-QZY" secondAttribute="bottom" constant="27.666666666666629" id="O8f-pI-DIv"/>
-                            <constraint firstItem="qDf-1h-ly4" firstAttribute="leading" secondItem="8Hz-SY-NdN" secondAttribute="leading" constant="16" id="Oyp-8U-OhB"/>
-                            <constraint firstItem="hMi-Fr-oIi" firstAttribute="top" secondItem="Gbf-mL-Ei2" secondAttribute="bottom" constant="36.666666666666686" id="SNa-1S-D05"/>
+                            <constraint firstItem="8Hz-SY-NdN" firstAttribute="trailing" secondItem="qDf-1h-ly4" secondAttribute="trailing" constant="18" id="Ldw-7N-Mo5"/>
+                            <constraint firstItem="qDf-1h-ly4" firstAttribute="top" secondItem="9cv-sI-QZY" secondAttribute="bottom" constant="24.666666666666629" id="O8f-pI-DIv"/>
+                            <constraint firstItem="qDf-1h-ly4" firstAttribute="leading" secondItem="8Hz-SY-NdN" secondAttribute="leading" constant="19" id="Oyp-8U-OhB"/>
                             <constraint firstItem="7my-4s-e4Q" firstAttribute="leading" secondItem="8Hz-SY-NdN" secondAttribute="leading" constant="100" id="VoT-dq-v21"/>
-                            <constraint firstItem="Dhr-eg-IOO" firstAttribute="leading" secondItem="8Hz-SY-NdN" secondAttribute="leading" constant="110" id="WO4-3d-cOC"/>
+                            <constraint firstItem="Dhr-eg-IOO" firstAttribute="leading" secondItem="8Hz-SY-NdN" secondAttribute="leading" constant="140" id="WO4-3d-cOC"/>
                             <constraint firstItem="elJ-h8-x04" firstAttribute="top" secondItem="hMi-Fr-oIi" secondAttribute="bottom" constant="8.6666666666666856" id="WuC-4X-Jsq"/>
                             <constraint firstItem="8Hz-SY-NdN" firstAttribute="trailing" secondItem="9cv-sI-QZY" secondAttribute="trailing" constant="183" id="XBt-LB-NUa"/>
+                            <constraint firstItem="hMi-Fr-oIi" firstAttribute="top" secondItem="Gbf-mL-Ei2" secondAttribute="bottom" constant="36.666666666666686" id="dOp-A1-abu"/>
                             <constraint firstItem="Gbf-mL-Ei2" firstAttribute="top" secondItem="7my-4s-e4Q" secondAttribute="bottom" constant="8" symbolic="YES" id="dgK-Yg-pJq"/>
+                            <constraint firstItem="hMi-Fr-oIi" firstAttribute="leading" secondItem="8Hz-SY-NdN" secondAttribute="leading" constant="37" id="fhB-2d-3rM"/>
                             <constraint firstItem="8Hz-SY-NdN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Dhr-eg-IOO" secondAttribute="trailing" symbolic="YES" id="hw4-di-2gB"/>
                             <constraint firstItem="8Hz-SY-NdN" firstAttribute="trailing" secondItem="elJ-h8-x04" secondAttribute="trailing" constant="16" id="oKb-id-MHD"/>
-                            <constraint firstItem="hMi-Fr-oIi" firstAttribute="leading" secondItem="8Hz-SY-NdN" secondAttribute="leading" constant="37" id="rxq-pa-cwN"/>
-                            <constraint firstItem="Gbf-mL-Ei2" firstAttribute="leading" secondItem="hMi-Fr-oIi" secondAttribute="leading" id="uAo-F1-OYb"/>
+                            <constraint firstItem="Gbf-mL-Ei2" firstAttribute="leading" secondItem="8Hz-SY-NdN" secondAttribute="leading" constant="40" id="r8i-nz-8gh"/>
                             <constraint firstItem="Dhr-eg-IOO" firstAttribute="top" secondItem="8Hz-SY-NdN" secondAttribute="top" id="wdM-fF-6uO"/>
+                            <constraint firstItem="8Hz-SY-NdN" firstAttribute="trailing" secondItem="Gbf-mL-Ei2" secondAttribute="trailing" constant="40" id="ytF-hp-9HK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="descriptionTextView" destination="elJ-h8-x04" id="KqH-Rd-kjZ"/>
                         <outlet property="filmTitleLabel" destination="Dhr-eg-IOO" id="KqH-lL-AX2"/>
                         <outlet property="galleryCollection" destination="qDf-1h-ly4" id="mdZ-bR-Xl2"/>
+                        <outlet property="likeButton" destination="bzG-29-x7B" id="jn5-Hg-m94"/>
                         <outlet property="posterImageView" destination="7my-4s-e4Q" id="BFs-lW-Wm3"/>
                         <outlet property="ratingLabel" destination="x3c-8r-XMe" id="Ud7-ft-Xgo"/>
                         <outlet property="releaseYearLabel" destination="xdb-Cm-foT" id="V9O-gX-bln"/>
@@ -362,6 +375,7 @@
     </scenes>
     <resources>
         <image name="arrow.down" catalog="system" width="118" height="128"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
         <image name="image1" width="411" height="617"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">

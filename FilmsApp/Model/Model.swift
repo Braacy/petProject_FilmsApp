@@ -49,13 +49,12 @@ class Model {
         Item(id: 13, testPic: "image14", testTitle: "Фильм 14", testYear: 2016, testRating: 4.4, isLiked: false),
         Item(id: 14, testPic: "image15", testTitle: "Фильм 15", testYear: 2014, testRating: 4.6, isLiked: false)]
     
-    func showIsLiked() -> [Item] {
+    func showIsLiked(){
         for i in testArray {
             if i.isLiked == true {
                 isLikedArray.append(i)
             }
         }
-        return isLikedArray
     }
     
     func ratingSort() -> [Item] {
@@ -65,4 +64,25 @@ class Model {
         newTestArray = testArray
         return newTestArray
     }
+    
+    func search(searchTextValue: String) {
+        newTestArray = []
+        
+        if searchTextValue == "" {
+            newTestArray = testArray
+        }else {
+            for item in testArray {
+                guard let unwrItem = item.testTitle else {
+                    return
+                }
+                if unwrItem.contains(searchTextValue) {
+                    newTestArray.append(item)
+                }
+            }
+        }
+        newTestArray = testArray.filter({
+            $0.testTitle?.range(of: searchTextValue, options: .caseInsensitive) != nil
+        })
+    }
+    
 }
