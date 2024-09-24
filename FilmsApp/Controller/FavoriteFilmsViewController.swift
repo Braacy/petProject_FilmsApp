@@ -9,10 +9,15 @@ import UIKit
 
 class FavoriteFilmsViewController: UIViewController {
 
+    let model = Model()
+    
     @IBOutlet weak var favoriteViewController: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        model.isLikedArray = model.testArray
+        model.ratingSort()
+        favoriteViewController.reloadData()
         
         favoriteViewController.delegate = self
         favoriteViewController.dataSource = self
@@ -35,10 +40,12 @@ extension FavoriteFilmsViewController: UICollectionViewDelegate, UICollectionVie
             return UICollectionViewCell()
         }
         
-        cell.favFilmImageView.image = UIImage(named: Model().showIsLiked()[indexPath.item].testPic ?? "image1")
-        cell.favFilmTitle.text = Model().showIsLiked()[indexPath.item].testTitle
-        cell.favRealeaseYEar.text = Model().showIsLiked()[indexPath.item].testYear
-        cell.favRatingLabel.text = Model().showIsLiked()[indexPath.item].testRating
+        cell.data = self.model.showIsLiked()[indexPath.item]
+        
+//        cell.favFilmImageView.image = UIImage(named: Model().showIsLiked()[indexPath.item].testPic ?? "image1")
+//        cell.favFilmTitle.text = Model().showIsLiked()[indexPath.item].testTitle
+//        cell.favRealeaseYEar.text = String(Model().showIsLiked()[indexPath.item].testYear ?? 0000)
+//        cell.favRatingLabel.text = String(Model().showIsLiked()[indexPath.item].testRating ?? 0.0)
         
         return cell
     }

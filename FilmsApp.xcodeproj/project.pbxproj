@@ -170,7 +170,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2456FD552C7CE5BC009AC7EB /* Build configuration list for PBXProject "FilmsApp11" */;
+			buildConfigurationList = 2456FD552C7CE5BC009AC7EB /* Build configuration list for PBXProject "FilmsApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -417,7 +417,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2456FD552C7CE5BC009AC7EB /* Build configuration list for PBXProject "FilmsApp11" */ = {
+		2456FD552C7CE5BC009AC7EB /* Build configuration list for PBXProject "FilmsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2456FD6C2C7CE5C0009AC7EB /* Debug */,

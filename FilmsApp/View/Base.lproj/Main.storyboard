@@ -35,15 +35,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="XdV-DT-MjH">
-                                <rect key="frame" x="0.0" y="91" width="390" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="n2T-am-xN2"/>
-                                </connections>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Ur-Mq-A81">
-                                <rect key="frame" x="20" y="167" width="350" height="677"/>
+                                <rect key="frame" x="20" y="116" width="350" height="728"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="joI-h0-P3K">
                                     <size key="itemSize" width="160" height="301"/>
@@ -71,13 +64,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1Ur-Mq-A81" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="3FE-Vn-cJO"/>
                             <constraint firstAttribute="bottom" secondItem="1Ur-Mq-A81" secondAttribute="bottom" id="48y-4c-hSX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Ur-Mq-A81" secondAttribute="trailing" constant="20" id="AYW-VG-V3j"/>
-                            <constraint firstItem="XdV-DT-MjH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="F8C-jU-rOS"/>
                             <constraint firstItem="1Ur-Mq-A81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jxn-uT-gHX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XdV-DT-MjH" secondAttribute="trailing" id="U9b-aE-Dqq"/>
-                            <constraint firstItem="1Ur-Mq-A81" firstAttribute="top" secondItem="XdV-DT-MjH" secondAttribute="bottom" constant="20" id="nJi-Nz-EQC"/>
-                            <constraint firstItem="XdV-DT-MjH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qqE-5a-C66"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FilmApp" id="F6s-cf-oOF">
@@ -86,10 +76,15 @@
                                 <segue destination="cMJ-ii-BRv" kind="show" id="fmO-CT-wO8"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="arrow.down" catalog="system" id="1bu-VS-cJj">
+                            <connections>
+                                <action selector="sortingButtonAction:" destination="BYZ-38-t0r" id="clK-9x-v2n"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="filmSearchBar" destination="XdV-DT-MjH" id="Yzt-4g-E4f"/>
                         <outlet property="mainViewController" destination="1Ur-Mq-A81" id="hPE-Nm-qIh"/>
+                        <outlet property="sortingButton" destination="1bu-VS-cJj" id="5lT-hB-Y2c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -366,6 +361,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.down" catalog="system" width="118" height="128"/>
         <image name="image1" width="411" height="617"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
